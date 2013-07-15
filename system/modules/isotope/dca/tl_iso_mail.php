@@ -131,7 +131,7 @@ $GLOBALS['TL_DCA']['tl_iso_mail'] = array
     'palettes' => array
     (
         '__selector__'              => array('attachDocument'),
-        'default'                   => '{name_legend},name;{address_legend},senderName,sender,cc,bcc;{document_legend:hide},attachDocument;{expert_legend:hide},template,priority',
+        'default'                   => '{name_legend},name;{address_legend},senderName,sender,cc,bcc;{document_legend:hide},attachDocument;{expert_legend:hide},collectionTpl,template,priority',
     ),
 
     // Subpalettes
@@ -190,7 +190,7 @@ $GLOBALS['TL_DCA']['tl_iso_mail'] = array
             'label'                 => &$GLOBALS['TL_LANG']['tl_iso_mail']['documentTemplate'],
             'exclude'               => true,
             'inputType'             => 'select',
-            'options'               => \Isotope\Backend::getTemplates('iso_invoice'),
+            'options'               => \Isotope\Backend::getTemplates('iso_collection_'),
             'eval'                  => array('includeBlankOption'=>true, 'tl_class'=>'w50', 'chosen'=>true)
         ),
         'documentTitle' => array
@@ -199,6 +199,16 @@ $GLOBALS['TL_DCA']['tl_iso_mail'] = array
             'exclude'               => true,
             'inputType'             => 'text',
             'eval'                  => array('mandatory'=>true, 'maxlength'=>255, 'decodeEntities'=>true, 'tl_class'=>'w50'),
+        ),
+        'collectionTpl' => array
+        (
+            'label'                 => &$GLOBALS['TL_LANG']['tl_iso_mail']['collectionTpl'],
+            'exclude'               => true,
+            'inputType'             => 'select',
+            'default'               => 'iso_collection_default',
+            'options'               => \Isotope\Backend::getTemplates('iso_collection_'),
+            'eval'                  => array('mandatory'=>true, 'tl_class'=>'w50', 'chosen'=>true),
+            'sql'                   => "varchar(64) NOT NULL default ''",
         ),
         'template' => array
         (

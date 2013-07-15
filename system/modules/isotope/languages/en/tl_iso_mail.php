@@ -25,6 +25,7 @@ $GLOBALS['TL_LANG']['tl_iso_mail']['attachDocument']    = array('Attach an order
 $GLOBALS['TL_LANG']['tl_iso_mail']['documentTemplate']  = array('Document template', 'Select an document template to override the default collection template.');
 $GLOBALS['TL_LANG']['tl_iso_mail']['documentTitle']     = array('Document title', 'Please specify a title for the attached document.');
 $GLOBALS['TL_LANG']['tl_iso_mail']['source']            = array('Source files', 'Please choose one or more .imt files from the files directory.');
+$GLOBALS['TL_LANG']['tl_iso_mail']['collectionTpl']     = array('Product collection template', 'Please choose a template to render the products. You can add custom collection templates to folder <em>templates</em>. Collection template files start with <em>iso_collection_</em>.');
 $GLOBALS['TL_LANG']['tl_iso_mail']['template']          = array('Email template', 'Here you can select an HTML e-mail template to use.');
 $GLOBALS['TL_LANG']['tl_iso_mail']['priority']          = array('Priority', 'Please select a priority.');
 
