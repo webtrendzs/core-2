@@ -434,8 +434,6 @@ class Order extends ProductCollection implements IsotopeProductCollection
         $arrData['products']    = $this->countItems();
         $arrData['subTotal']    = Isotope::formatPriceWithCurrency($this->getSubtotal(), false);
         $arrData['grandTotal']  = Isotope::formatPriceWithCurrency($this->getTotal(), false);
-        $arrData['cart_text']   = strip_tags($this->replaceInsertTags($this->getProducts('iso_products_text')));
-        $arrData['cart_html']   = $this->replaceInsertTags($this->getProducts('iso_products_html'));
 
         // !HOOK: add custom email tokens
         if (isset($GLOBALS['ISO_HOOKS']['getOrderEmailData']) && is_array($GLOBALS['ISO_HOOKS']['getOrderEmailData']))
