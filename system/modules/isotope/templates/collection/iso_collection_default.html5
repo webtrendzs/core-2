@@ -22,6 +22,15 @@
 <?php endif; ?>
 
 <table>
+<thead>
+    <tr>
+        <td class="sku"><?php echo $GLOBALS['TL_LANG']['MSC']['iso_order_sku']; ?></td>
+        <td class="name"><?php echo $GLOBALS['TL_LANG']['MSC']['iso_order_items']; ?></td>
+        <td class="quantity"><?php echo $GLOBALS['TL_LANG']['MSC']['iso_quantity_header']; ?></td>
+        <td class="price"><?php echo $GLOBALS['TL_LANG']['MSC']['iso_price_header']; ?></td>
+        <td class="subtotal"><?php echo $GLOBALS['TL_LANG']['MSC']['iso_subtotal_header']; ?></td>
+    </tr>
+</thead>
 <tfoot>
     <tr class="foot_0 foot_first subtotal">
         <td class="col_first">&nbsp;</td>
